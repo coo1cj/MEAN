@@ -1,0 +1,54 @@
+<h2 class="sub-header">my connector</h2>
+<div class="table-responsive">
+  <!-- Single button -->
+  <div class="btn-group">
+    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      all
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li>
+        <a>friend</a>
+      </li>
+      <li>
+        <a>family</a>
+      </li>
+      <li>
+        <a>college</a>
+      </li>
+      <li>
+        <a>classmate</a>
+      </li>
+      <li role="separator" class="divider"></li>
+      <li>
+        <a>Separated link</a>
+      </li>
+    </ul>
+  </div>
+  <a class="btn btn-success pull-right" routerLink="/contacts/new">add new</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>name</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>tags</th>
+        <th>opt</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of contacts;">
+        <td>{{ item.name }}</td>
+        <td>{{ item.email }}</td>
+        <td>{{ item.phone }}</td>
+        <td>
+          <span class="label label-info">friend</span>
+        </td>
+        <td>
+          <a [routerLink]="['/contacts/edit', item.id]">edit </a>
+          <a (click)="deleteContactById(item.id, $event)" href="#">delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

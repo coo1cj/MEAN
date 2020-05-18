@@ -1,0 +1,7 @@
+@import url('bootstrap/dist/css/bootstrap.css')
+
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
