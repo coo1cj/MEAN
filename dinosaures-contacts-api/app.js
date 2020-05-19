@@ -27,7 +27,7 @@ server.use(jsonServer.bodyParser)
 /**
  * signup
  */
-server.post('/users', parameterValidate({
+server.post('/dinosaures', parameterValidate({
   email: 'email',
   password: 'password'
 }), async (req, res, next) => {

@@ -28,7 +28,7 @@ export class SignupComponent implements OnInit {
   signup() {
 
     const formData = this.signupForm
-    this.http.post('http://localhost:3000/users', formData)
+    this.http.post('http://localhost:3000/dinosaures', formData)
       .toPromise()
       .then((data: any) => {
         this.email_err_msg = ''
